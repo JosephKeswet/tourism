@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body >
+    <div class="navbar">
+        <div class="container">
+            <a href="#" class="logo" >Travel<span>Far</span></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="../Images/menu.png" width="25px" alt="Open Navigation">
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="../Images/exit-icon-png-2.jpg" width="25px" alt="Close Navigation">
+                <ul class="primary-nav">
+                    <li class="current-page"><a href="index.html"> HOME</a></li>
+                    <li><a href="#"> TOURS</a></li>
+                    <li><a href="destination.html">DESTINATIONS</a> </li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                <p class="subhead">Travel website</p>
+                <h1>NEVER STOP EXPLORING THE WORLD.</h1>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ad veritatis rem.</P>
+                <a href="#" class="btn" >LEARN MORE</a>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div id="card" class="card-1">
+            <h2>BEACH</h2>
+        
+        </div>
+        <div class="card-2">
+            <h2>NATURE</h2>
+        
+        </div>
+        <div class="card-3">
+            <h2>HOTEL</h2>
+        
+        </div>
+    </section>
+
+    <!-- <section>
+        <div class="inputs">
+            <label for="name">Name</label>
+            <input id="name" type="text">
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email">
+
+            <label for="text-area">Message</label>
+            <textarea name="text-araea" id="text-area" cols="30" rows="10"></textarea>
+
+            <button class="send-message-btn" type="submit">Send Message</button>
+        </div>
+    </section> -->
+
+    <script>
+        let mobileBtn = document.getElementById('mobile-cta')
+        nav = document.querySelector('nav')
+        mobileBtnExit = document.getElementById('mobile-exit');
+
+    mobileBtn.addEventListener('click', () =>{
+        nav.classList.add('mobile-menu')
+    })
+
+    mobileBtnExit.addEventListener('click', () =>{
+        nav.classList.remove('mobile-menu')
+    })
+
+
+    
+    </script>
+
+
+
+</body>
+</html>

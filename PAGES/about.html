@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+   
+    <div class="navbar" >
+        <div class="container">
+            <h1>Travel<span>Far</span></h1>
+            <img id="mobile-m" class="mobile-menu" src="../Images/menu.png" alt="Open navigation"  >
+
+            <nav>
+                <img id="mobile-e" class="mobile-menu-exit" src="../Images/exit-icon-png-2.jpg" alt="Close Navigation">
+                <ul class="primary-nav">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="destination.html">DESTINATIONS</a></li>
+                    <li><a href="#">EXPLORE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="container">
+            <div class="card">
+                <h2>WHO WE ARE?</h2>
+                <h1>ABOUT TravelFar</h1>
+
+                <div class="content">
+                    <p>Your next exciting vacation awaits and we're here to help you make it happen.We give the best travel experiences that are as adventurous and authentic as you are.</p>
+                </div>
+            </div>
+    </section>
+
+<section class="discover">
+    <div class="card-2">
+    <h1>SEEK YOUR ADVENTURE</h1>
+    <p>Explore our top travel and tour destinations and discover your perfect holiday.Whether you want to explore a new city or a remote luxury retreat,we have an amazing personalized experience for you.</p>
+    <p>Do you want to explore some of the most iconic sights in the world? Immerse yourself in an ancient culture,relax on a beach with cocktails in hand ,or seek out adventure? We've got it covered</p>
+    <p>A holiday is about more than just the destination. It's about the planning, the anticipation, and the memories made along the way. Where you travel to can have a huge influence on your trip, so it's important to pick a destination that inspires you.</p>
+    <p>Everyone has different ideas of what makes a great vacation. You might be looking for a relaxing beach getaway or a big city adventure. Maybe you want to explore nature or spend time with family in an exotic location. Whatever your vision, there is somewhere perfect for you in our list of top destinations</p>
+    </div>
+</section>
+
+
+<span><a href="destination.html">VIEW ALL DESTINATIONS</a></span>
+
+
+<script>
+    let mobileBtn = document.getElementById('mobile-m')
+    nav = document.querySelector('nav')
+    mobileBtnExit = document.getElementById('mobile-e');
+
+mobileBtn.addEventListener('click', () =>{
+    nav.classList.add('menu-btn')
+})
+
+mobileBtnExit.addEventListener('click', () =>{
+    nav.classList.remove('menu-btn')
+})
+</script>
+
+
+</body>
+</html>

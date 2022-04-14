@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: url('bg2.png');
+    background-size: cover;
+   
+}
+.logo{
+    font-size: 3em;
+}
+span{
+    color: #007AF3;
+}
+p{
+    text-align: center;
+    padding-top: 8%;
+    padding-bottom: 10%;
+    color: blue;
+    font-size: large;
+}
+
+
+
+form{
+    margin-top: 50px;
+    text-align: center;
+}
+input{
+    display: block;
+    width: 350px;
+    height: 40px;
+    margin: 20px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    background: transparent;
+    
+}
+input,select, textarea{
+    color: darkgray;
+}
+textarea:focus,input:focus{
+    color: black;
+ 
+}
+
+
+button{
+    width: 350px;
+    height: 30px;
+    font-size: 20px;
+    background-color:#007AF3;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: darkgray;
+}
+form h1{
+    margin-bottom: 30px;
+    
+ 
+}
+.user{
+    justify-content: center;
+    padding-bottom: 50px;
+
+}
+::placeholder{
+    color: darkgrey;
+ 
+}
+.footer{
+    text-align: center;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.2);
+    font-family: monospace;
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin-top: 2em
+}
+
+@media all and (min-width: 400px) {
+    button{
+        width: 70%;
+        margin-top: 50px;
+    }
+    input{
+        width: 30em;
+        height: 6rem;
+        margin: 1px;
+    }
+    
+    
+}
+
+@media all and (max-width: 415px) {
+    input{
+        width: 20rem;
+    }
+    button{
+        width: 30%;
+    }
+    
+}
+
+
+@media all and (max-width: 542px) {
+    input{
+        width: 20rem;
+    }
+    
+}
+
+@media all and (max-width: 281px) {
+    input{
+        width: 15rem;
+    }
+    
+}
+
+@media all and (min-width: 415px) {
+  button{
+      width: 30%;
+  }
+}

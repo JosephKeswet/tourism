@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/destination.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a href="#" class="logo" > Travel<span>Far</span></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="../Images/menu.png" width="25px" alt="Open Navigation">
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="../Images/exit-icon-png-2.jpg" width="25px" alt="Close Navigation">
+                <ul class="primary-nav">
+                    <li class="current-page"><a href="index.html"> HOME</a></li>
+                    <li><a href="#"> TOURS</a></li>
+                    <li><a href="#">EXPLORE</a> </li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <h1>Popular Destinations</h1>
+
+    <section class="container">
+        <div class="card">
+            <div class="card-image card-1"></div>
+            <h2>Dubai</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus adipisci rerum, quasi officia ad autem.</p>
+            <p><span>$300.99</span></p>
+        </div>
+
+        <div class="card">
+            <div class="card-image card-2"></div>
+            <h2>South Africa</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officia ut praesentium pariatur sit totam!</p>
+            <p><span>$300.99</span></p>
+            
+        </div>
+
+        <div class="card">
+            <div class="card-image card-3"></div>
+            <h2>Miami</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste molestiae, aut iusto rem saepe veniam?</p>
+            <p><span>$300.99</span></p>
+        </div>
+
+
+        <div class="card">
+            <div class="card-image card-4"></div>
+            <h2>Gambia</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus adipisci rerum, quasi officia ad autem.</p>
+            <p><span>$300.99</span></p>
+        </div>
+
+        <div class="card">
+            <div class="card-image card-5"></div>
+            <h2>Lagos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officia ut praesentium pariatur sit totam!</p>
+            <p><span>$300.99</span></p>
+            
+        </div>
+
+        <div class="card">
+            <div class="card-image card-6"></div>
+            <h2>Los Angeles</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste molestiae, aut iusto rem saepe veniam?</p>
+            <p><span>$300.99</span></p>
+        </div>
+    </section>
+  
+
+    <script>
+            let mobileBtn = document.getElementById('mobile-cta')
+    nav = document.querySelector('nav')
+    mobileBtnExit = document.getElementById('mobile-exit');
+
+mobileBtn.addEventListener('click', () =>{
+    nav.classList.add('menu-btn')
+})
+
+mobileBtnExit.addEventListener('click', () =>{
+    nav.classList.remove('menu-btn')
+})
+    </script>
+
+</body>
+</html>
