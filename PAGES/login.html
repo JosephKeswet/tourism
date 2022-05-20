@@ -16,7 +16,7 @@
   <div class="container">
    
     
-        <form action="">
+        <form>
             
          
           <div class="user">
@@ -24,17 +24,63 @@
           </div>
             
          
-            <input type="email" placeholder="Email Address" name="userEmail" id="user-mail" required>
+            <input type="email" placeholder="Email Address" name="userEmail" id="user-mail" class="signin-email" >
 
-            <input type="password" placeholder="Password" name="user-password" id="user-password">
+            <input type="password" placeholder="Password" name="user-password" class="signin-password" id="user-password">
             
-            <button type="submit" class="btn">LOGIN</button>
+            <button type="submit" class="btn " id="mybtn" >LOGIN</button>
         </form>
+        <p class="sign-in">Do you have an account <a href="../PAGES/sign-up.html" class="register">Register here</a></p>
 
     
 
         <div class="footer">©TravelFar</div>
      
+
+         <script>
+          // const email = document.getElementById("user-email").value.indexOf("@");
+          // const password = document.getElementById("user-password").value;
+
+          const form = {
+  email: document.getElementById("user-email").value,
+  password: document.getElementById("user-password").value,
+  submit: document.getElementById("mybtn"),
+};
+let button = form.submit.addEventListener("click", (e) => {
+  e.preventDefault();
+  const login = "https://keswet.herokuapp.com/accounts/auth/signin/";
+
+  fetch(login, {
+    method: "POST",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: form.email.value,
+      password: form.password.value,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      // code here //
+      if (data.error) {
+        alert("Error Password or Username"); /*displays error message*/
+      } else {
+        window.open(
+          "index.html"
+        ); /*opens the target page while Id & password matches*/
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+
+
+        </script>
   </div>
 </body>
 </html>

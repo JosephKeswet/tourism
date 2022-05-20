@@ -199,6 +199,10 @@ nav ul.primary-nav {
   margin-top: 5em;
 }
 
+nav li {
+  list-style-type: none;
+}
+
 nav li a {
   color: white;
   text-decoration: none;

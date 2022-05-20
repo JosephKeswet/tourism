@@ -56,6 +56,7 @@ nav ul .primary-nav {
 
 nav li {
   text-decoration: none;
+  list-style-type: none;
 }
 
 nav li a {
@@ -88,6 +89,7 @@ nav li a:hover {
   section .card {
     text-align: center;
     background-color: white;
+    background-image: url(../Images/beach.jpg);
     margin: .8em;
     padding: 2em;
   }
@@ -104,11 +106,15 @@ nav li a:hover {
   .discover {
     text-align: center;
     background-color: yellow;
+    background-image: url(../Images/beach.jpg);
     margin: 1.5em;
     padding: 2em;
   }
+  .discover h1 {
+    color: white;
+  }
   .discover p {
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 2em;
   }
   a {

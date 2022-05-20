@@ -10,7 +10,7 @@ body{
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background: url('bg2.png');
+    background: url('../Images/dubai.jpg');
     background-size: cover;
    
 }
@@ -79,13 +79,14 @@ form h1{
 
 }
 ::placeholder{
-    color: darkgrey;
+    color: white;
  
 }
 .footer{
     text-align: center;
     margin-bottom: 0;
-    color: rgba(0,0,0,0.2);
+    /* color: rgba(0,0,0,0.2); */
+    color: black;
     font-family: monospace;
     font-weight: 100;
     font-size: 1.5rem;

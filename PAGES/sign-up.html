@@ -10,34 +10,160 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/SignUp.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <script src="../script.js"></script>
 </head>
 <body>
 
   <div class="container">
    
     
-        <form action="">
+        <form  id="form" >
             
          
           <div class="user">
             <h1 class="logo">Travel<span>Far</span></h1>
           </div>
             
-            <input type="text" name="userFName" placeholder="First Name" id="user-firstname" required>
+            <input type="text" name="formFirstName" placeholder="First Name" id="user-firstname" required>
 
-            <input type="text" name="userLName" placeholder="Last Name" id="user-lastname" required>
+            <input type="text" name="formLastName" placeholder="Last Name" id="user-lastname" required>
           
-            <input type="email" placeholder="Email Address" name="userEmail" id="user-mail" required>
+            <input type="email" placeholder="Email Address" name="formEmail" id="user-mail" required>
 
-            <input type="password" placeholder="Password" name="user-password" id="user-password">
+            <input type="password" placeholder="Password" name="formPassword" id="user-password">
             
-            <button type="submit" class="btn">Sign Up</button>
-        </form>
+            <button type="submit" name="formSubmit"  class="btn">Sign Up</button>
+         
+          </form>
 
+          <p id="success-message"></p>
     
 
         <div class="footer">©TravelFar</div>
+
+        
      
   </div>
+
+    <script>
+
+      let firstname = document.getElementById('user-firstname').value;
+      let lastname = document.getElementById('user-lastname').value;
+      let email = document.getElementById('user-mail').value;
+      let password = document.getElementById('user-password').value;
+      let form = document.getElementById('form')
+
+      let data ={
+        "firstname":firstname,
+        "lastname":lastname,
+        "email":email,
+        "password":password
+      }
+
+      form.addEventListener('submit',function(e){
+        e.preventDefault();
+        // const url = ;
+         fetch('https://keswet.herokuapp.com/accounts/manage/signup/',{
+          method:'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+          }).then(response =>  response.json())
+          .then(data => console.log("Success",data))
+          .catch(error => console.log('ERROR',error))
+      }) 
+ 
+
+
+      
+
+    
+
+
+// // function submitForm(e, form){
+//     e.preventDefault();
+    
+//     fetch('https://keswet.herokuapp.com/accounts/manage/signup/', {
+//       method: 'POST',
+//       body: JSON.stringify({ email: form.formEmail.value, password: form.formPassword.value}),
+//       headers: {
+//     'Content-Type': 'application/json',
+//   }
+//     }).then(function(response) {
+//       // console.log(response)
+//       return response.json();
+      
+//     }).then(function(data) {
+//       //Success code goes here
+//       // if(response.json().success ==true){
+//       //   document.getElementById("success-message").innerHTML("You have succesfully signed up")
+//       // }else{
+//       //   document.getElementById("success-message").innerHTML("Error on sign up")
+//       // }
+//       alert('form submited')
+//       window.location.replace("../PAGES/login.html")
+//     }).catch(function(err) {
+//       //Failure
+//       alert('Error')
+//     });
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     const myForm = document.getElementById('form');
+
+// myForm.addEventListener('submit',function (e){
+//   e.preventDefault();
+
+//   const formData = new FormData(this);
+//   const firstname = document.getElementById("user-firstname")
+//   const email = document.getElementById("user-mail")
+//   const lastname = document.getElementById("user-lastname")
+//   const password = document.getElementById("user-password")
+
+
+//   const  signupObj = {
+//     "email": email,
+//     "first_name": firstname,
+//     "last_name": lastname,
+//     "password": password
+//   }
+
+//   const response =  fetch('https://keswet.herokuapp.com/accounts/manage/signup/',{
+//     method:'post',
+//     body:signupObj
+
+//   })
+
+//   var data = response.json()
+
+//   console.log(data)
+//   // .then(function(response){
+//   //   return response.text();
+  
+
+//   // }).then(function(text){
+//   //   console.log(text);
+//   // }).catch(function(error){
+//   //   console.error(error);
+//   // })
+// })
+    </script>
+
+
 </body>
 </html>
